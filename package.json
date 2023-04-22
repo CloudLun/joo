@@ -1,7 +1,7 @@
 {
   "name": "joo",
   "version": "0.1.0",
-  "homepage": "https://CloudLun/joo",
+  "homepage": "https://CloudLun.github.io/joo",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
