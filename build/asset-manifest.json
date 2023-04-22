@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/joo/static/css/main.d2d2236f.css",
+    "main.js": "/joo/static/js/main.856c35e9.js",
+    "static/js/787.6bcd75b6.chunk.js": "/joo/static/js/787.6bcd75b6.chunk.js",
+    "static/media/Korea.geojson": "/joo/static/media/Korea.dcea79d8a564a7b024ee.geojson",
+    "static/media/chili powder 1.png": "/joo/static/media/chili powder 1.8ee00322be7157145726.png",
+    "index.html": "/joo/index.html",
+    "static/media/Group 7.svg": "/joo/static/media/Group 7.6c8c821ab34404267e0e26b92f14042e.svg",
+    "main.d2d2236f.css.map": "/joo/static/css/main.d2d2236f.css.map",
+    "main.856c35e9.js.map": "/joo/static/js/main.856c35e9.js.map",
+    "787.6bcd75b6.chunk.js.map": "/joo/static/js/787.6bcd75b6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2d2236f.css",
+    "static/js/main.856c35e9.js"
+  ]
+}
