@@ -4,8 +4,24 @@ import * as d3 from "d3";
 
 import Korea from "../Data/Korea.geojson";
 
-const KoreanMap = () => {
+const NEGroup = ["Gangwon-do"];
+const NWGroup = ["Seoul", "Gyeonggi-do", "Incheon"];
+const MWGroup = ["Chungcheongnam-do", "Chungcheongbuk-do", "Sejong", "Daejeon"];
+const MEGroup = [
+  "Gyeongsangbuk-do",
+  "Gyeongsangnam-do",
+  "Busan",
+  "Ulsan",
+  "Daegu",
+];
+const SWGroup = ["Jeollabuk-do", "Jeollanam-do", "Gwangju"];
+const KoreanGroup = [NEGroup, NWGroup, MWGroup, MEGroup, SWGroup];
+
+const KoreanMap = ({setProvince}) => {
   const ref = useRef();
+
+  let targetProvince;
+  let targetProvinceGroup = [];
 
   useEffect(() => {
     const svg = d3.select(ref.current);
@@ -14,8 +30,8 @@ const KoreanMap = () => {
 
     let projection = d3
       .geoMercator()
-      .center([127.788, 35.9])
-      .scale(4550)
+      .center([127.8, 35.9])
+      .scale(6000)
       .translate([width / 2, height / 2]);
 
     d3.json(Korea).then((data) => {
@@ -23,16 +39,28 @@ const KoreanMap = () => {
         .selectAll("path")
         .data(data.features)
         .join("path")
-        .attr("fill", "#997B56")
+        .attr("class", (d) => d.properties.name_1)
+        .attr("fill", "#F9F7EE")
         .attr("d", d3.geoPath().projection(projection))
-        .style("stroke", "white")
+        .style("stroke", "#1E2024")
         .style("opacity", 0.3)
-        .on("mouseover", event => {
-          d3.select(event.currentTarget).style("fill", "#1E2024");
-        })
-        .on("mouseout", event => {
-            d3.select(event.currentTarget).style("fill", "#997B56");
+        .on("mouseover", (event) => {
+          targetProvince = event.target.className.baseVal;
+          KoreanGroup.map((K, i) => {
+            if (K.includes(targetProvince)) {
+              targetProvinceGroup = K;
+              setProvince(KoreanGroup.indexOf(targetProvinceGroup))
+              K.map((k, j) => {
+                d3.selectAll(`.${k}`).style("opacity", 1);
+              });
+            }
           });
+        })
+        .on("mouseout", (event) => {
+          targetProvinceGroup.map((k, j) => {
+            d3.selectAll(`.${k}`).style("opacity", 0.3);
+          });
+        });
     });
   });
 

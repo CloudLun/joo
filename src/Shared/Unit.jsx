@@ -2,10 +2,10 @@ import React from "react";
 
 import gochugaru from "../img/chili powder 1.png";
 
-const Unit = () => {
+const Unit = ({backPageHandler}) => {
   return (
     <div className="px-[97px] pt-[110px] w-full h-[100vh]">
-      <div className="flex items-center gap-[37px]">
+      <div className="flex items-center gap-[37px] cursor-pointer" onClick={backPageHandler}>
         <div className="border-l-[3px] border-b-[3px] border-white w-[14px] h-[14px] rotate-45"></div>
         <div className="font-medium text-[30px] text-white tracking-[12px] leading-[50px]">
           Go back

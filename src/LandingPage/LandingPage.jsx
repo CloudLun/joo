@@ -4,7 +4,7 @@ import logo from "../img/Group 7.svg";
 
 const LandingPage = () => {
   return (
-    <div className="border-2 flex justify-center items-center w-[100vw] h-[100vh] ">
+    <div className="flex justify-center items-center w-[100vw] h-[100vh] ">
       <div className="border-[2px] flex flex-col w-[633px] h-[302px]">
         <div className="flex w-full h-[203px]">
           <div className="border-r-[2px] border-b-[2px] border-white flex flex-col justify-center items-center gap-[27px] w-[50%] h-full">
