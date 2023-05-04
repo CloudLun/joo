@@ -1,6 +1,14 @@
 import React from "react";
 
-const Unit = ({ backPageHandler, cuisines, plate, cuisineImg, order ,ingredient }) => {
+const Unit = ({
+  backPageHandler,
+  cuisines,
+  plate,
+  cuisineImg,
+  order,
+  ingredients,
+  chiliPowder
+}) => {
   return (
     <div className="px-[97px] pt-[110px] w-full h-[100vh]">
       <div
@@ -16,7 +24,7 @@ const Unit = ({ backPageHandler, cuisines, plate, cuisineImg, order ,ingredient 
         <div className="relative flex flex-col justify-center items-center w-[500px] h-[500px]">
           <img src={plate} alt="" className="w-full h-[full]" />
           <img
-            src={cuisineImg[order]}
+            src={chiliPowder}
             alt=""
             className="absolute w-[60%] h-[55%]"
           />
@@ -25,10 +33,10 @@ const Unit = ({ backPageHandler, cuisines, plate, cuisineImg, order ,ingredient 
         <div className="">
           <div className="mb-[60px]">
             <h1 className="mb-[10px] font-bold text-[32px] text-white tracking-[6px]">
-              {cuisines[order]["name"]}
+              gochugaru
             </h1>
             <h3 className="font-regular text-[18px] text-white tracking-[4px]">
-              {cuisines[order]["name_in_Eng"]}
+              Chili powder
             </h3>
           </div>
           <div className="mb-[40px]">
@@ -41,10 +49,10 @@ const Unit = ({ backPageHandler, cuisines, plate, cuisineImg, order ,ingredient 
           </div>
           <div>
             <h2 className="mb-[20px] font-bold text-[18px] text-white tracking-[4px]">
-              Foods with {cuisines[order]["name"]}
+              Foods with Gochugaru
             </h2>
             <div className="flex flex-wrap gap-[10px] w-[439px]">
-              {cuisines[order]["ingredients"].map((ingredient, i) => {
+              {ingredients.map((ingredient, i) => {
                 return (
                   <h3
                     key={i}

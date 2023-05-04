@@ -31,7 +31,7 @@ const MonthPage = () => {
   );
 
   return (
-    <div className="px-[105px] pt-[110px] w-[100vw] text-white bg-main">
+    <div className="px-[105px] pt-[60px] w-[100vw] text-white bg-main">
       <Header title={header.title} subtitle={header.subtitle} />
       <div>
         <div className="flex justify-between">
@@ -54,6 +54,7 @@ const MonthPage = () => {
           *follow th lunar calendar
         </div>
       </div>
+      <CourseInfo />
       <CourseInfo />
     </div>
   );

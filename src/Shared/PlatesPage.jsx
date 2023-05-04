@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Unit from "./Unit";
-import CuisinePlates from "../CuisinePage/CuisinePlates";
+import CuisinePlates from "../CuisinePage/CuisinePlatesD3";
 
 const PlatesPage = ({ title, intro }) => {
   const [modal, setModal] = useState(false);

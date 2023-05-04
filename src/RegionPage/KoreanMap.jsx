@@ -17,9 +17,8 @@ const MEGroup = [
 const SWGroup = ["Jeollabuk-do", "Jeollanam-do", "Gwangju"];
 const KoreanGroup = [NEGroup, NWGroup, MWGroup, MEGroup, SWGroup];
 
-const KoreanMap = ({setProvince}) => {
+const KoreanMap = ({ setProvince, province }) => {
   const ref = useRef();
-
   let targetProvince;
   let targetProvinceGroup = [];
 
@@ -30,11 +29,12 @@ const KoreanMap = ({setProvince}) => {
 
     let projection = d3
       .geoMercator()
-      .center([127.8, 35.9])
+      .center([127.8, 36.3])
       .scale(6000)
       .translate([width / 2, height / 2]);
 
     d3.json(Korea).then((data) => {
+      console.log(KoreanGroup[province].includes("Gangwon"));
       svg
         .selectAll("path")
         .data(data.features)
@@ -43,23 +43,26 @@ const KoreanMap = ({setProvince}) => {
         .attr("fill", "#F9F7EE")
         .attr("d", d3.geoPath().projection(projection))
         .style("stroke", "#1E2024")
-        .style("opacity", 0.3)
-        .on("mouseover", (event) => {
+        .style("opacity", (d) =>
+          KoreanGroup[province].includes(d["properties"]["name_1"]) ? 1 : 0.3
+        )
+        .on("mouseenter", (event) => {
           targetProvince = event.target.className.baseVal;
           KoreanGroup.map((K, i) => {
             if (K.includes(targetProvince)) {
               targetProvinceGroup = K;
-              setProvince(KoreanGroup.indexOf(targetProvinceGroup))
-              K.map((k, j) => {
-                d3.selectAll(`.${k}`).style("opacity", 1);
-              });
+              setProvince(KoreanGroup.indexOf(targetProvinceGroup));
+              // K.map((k, j) => {
+              //   d3.selectAll(`.${k}`).style("opacity", 1);
+              // });
             }
           });
         })
         .on("mouseout", (event) => {
-          targetProvinceGroup.map((k, j) => {
-            d3.selectAll(`.${k}`).style("opacity", 0.3);
-          });
+          // targetProvinceGroup.map((k, j) => {
+          //   d3.selectAll(`.${k}`).style("opacity", 0.3);
+          // });
+          // setProvince("")
         });
     });
   });
