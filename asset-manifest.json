@@ -1,19 +1,35 @@
 {
   "files": {
-    "main.css": "/joo/static/css/main.152eae3f.css",
-    "main.js": "/joo/static/js/main.8ef37540.js",
+    "main.css": "/joo/static/css/main.9ae91724.css",
+    "main.js": "/joo/static/js/main.6c998354.js",
     "static/js/787.6bcd75b6.chunk.js": "/joo/static/js/787.6bcd75b6.chunk.js",
     "static/media/Korea.geojson": "/joo/static/media/Korea.dcea79d8a564a7b024ee.geojson",
+    "static/media/Gimbap.svg": "/joo/static/media/Gimbap.2e74ac0276bc6f43bd8eae115dd3a8a5.svg",
+    "static/media/Tteok-bokki.svg": "/joo/static/media/Tteok-bokki.f0b8f42f87a02e756eea3406cc5f6728.svg",
+    "static/media/Kimchi-bokkeum-bap.svg": "/joo/static/media/Kimchi-bokkeum-bap.d92ff4858824a21ec8c055179cf7df0f.svg",
     "static/media/chili powder 1.png": "/joo/static/media/chili powder 1.8ee00322be7157145726.png",
+    "static/media/Kal-guksu.svg": "/joo/static/media/Kal-guksu.9328f29fd134bcc0d5a712e6b0a4ff9e.svg",
+    "static/media/Janchi-guksu.svg": "/joo/static/media/Janchi-guksu.af68b1a773b04bacbd241897540a94a7.svg",
+    "static/media/Kimchi-jjigae.svg": "/joo/static/media/Kimchi-jjigae.1d477f5510390d4484d3f787b7d3affa.svg",
+    "static/media/Bulgogi.svg": "/joo/static/media/Bulgogi.6e1df4a496f21dc1ed25feb6c634b47d.svg",
+    "static/media/Galbi.svg": "/joo/static/media/Galbi.31993c106a1c0a08ffadaccb39df24bb.svg",
+    "static/media/Budae jjigae.svg": "/joo/static/media/Budae jjigae.b8a3ce6f186aa4ca4888136ff224842d.svg",
+    "static/media/Jeon.svg": "/joo/static/media/Jeon.4efde502aaf0131adb1e4976ea15c635.svg",
+    "static/media/Japchae.svg": "/joo/static/media/Japchae.17468801d20d80c8c6e2f2a1e74629a2.svg",
+    "static/media/Bibimbap.svg": "/joo/static/media/Bibimbap.28765062e7392fd13aca92ba1e2a10bb.svg",
+    "static/media/Mandu.svg": "/joo/static/media/Mandu.b98cc4229e16616d6c02560b05a62e07.svg",
     "static/media/Group 23.png": "/joo/static/media/Group 23.985a13a3fa5c6cb4ee38.png",
+    "static/media/Samgyeopsal.svg": "/joo/static/media/Samgyeopsal.5f21e9ecd068374b00eca7626f4c81cf.svg",
+    "static/media/Kimchi.svg": "/joo/static/media/Kimchi.afa30b9352b8f90be3f1eb8690c3e68a.svg",
+    "static/media/plate.svg": "/joo/static/media/plate.4b61f59ccdac6fd4a6e6472f8526ea73.svg",
     "index.html": "/joo/index.html",
     "static/media/Group 7.svg": "/joo/static/media/Group 7.6c8c821ab34404267e0e26b92f14042e.svg",
-    "main.152eae3f.css.map": "/joo/static/css/main.152eae3f.css.map",
-    "main.8ef37540.js.map": "/joo/static/js/main.8ef37540.js.map",
+    "main.9ae91724.css.map": "/joo/static/css/main.9ae91724.css.map",
+    "main.6c998354.js.map": "/joo/static/js/main.6c998354.js.map",
     "787.6bcd75b6.chunk.js.map": "/joo/static/js/787.6bcd75b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.152eae3f.css",
-    "static/js/main.8ef37540.js"
+    "static/css/main.9ae91724.css",
+    "static/js/main.6c998354.js"
   ]
 }
