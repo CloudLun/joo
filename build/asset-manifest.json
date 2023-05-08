@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/joo/static/css/main.9ae91724.css",
-    "main.js": "/joo/static/js/main.6c998354.js",
+    "main.css": "/joo/static/css/main.7c690695.css",
+    "main.js": "/joo/static/js/main.a9deff49.js",
     "static/js/787.6bcd75b6.chunk.js": "/joo/static/js/787.6bcd75b6.chunk.js",
     "static/media/Korea.geojson": "/joo/static/media/Korea.dcea79d8a564a7b024ee.geojson",
     "static/media/Gimbap.svg": "/joo/static/media/Gimbap.2e74ac0276bc6f43bd8eae115dd3a8a5.svg",
@@ -24,12 +24,12 @@
     "static/media/plate.svg": "/joo/static/media/plate.4b61f59ccdac6fd4a6e6472f8526ea73.svg",
     "index.html": "/joo/index.html",
     "static/media/Group 7.svg": "/joo/static/media/Group 7.6c8c821ab34404267e0e26b92f14042e.svg",
-    "main.9ae91724.css.map": "/joo/static/css/main.9ae91724.css.map",
-    "main.6c998354.js.map": "/joo/static/js/main.6c998354.js.map",
+    "main.7c690695.css.map": "/joo/static/css/main.7c690695.css.map",
+    "main.a9deff49.js.map": "/joo/static/js/main.a9deff49.js.map",
     "787.6bcd75b6.chunk.js.map": "/joo/static/js/787.6bcd75b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ae91724.css",
-    "static/js/main.6c998354.js"
+    "static/css/main.7c690695.css",
+    "static/js/main.a9deff49.js"
   ]
 }

@@ -1,4 +1,4 @@
-export const cuisines = [
+export const cuisinesData = [
   {
     name: "Tteok-bokki",
     name_in_Eng: "Simmered rice cake",
@@ -51,8 +51,6 @@ export const cuisines = [
       "carrot",
       "egg",
       "spinach",
-      "sesame oil",
-      "soy sauce",
       "pickled yellow radish",
       "sesame seed",
     ],

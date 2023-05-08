@@ -3,7 +3,7 @@ import Header from "../Shared/Header";
 import Unit from "../Shared/Unit";
 import CuisinePlates from "./CuisinePlates";
 
-import { cuisines } from "../Data/cuisines";
+import { cuisinesData } from "../Data/cuisines";
 
 import plate from "../img/plate.svg";
 import tteokBokki from "../img/cuisines/Tteok-bokki.svg";
@@ -78,7 +78,7 @@ const CuisinePage = () => {
         <CuisinePlates
           openIntroHandler={openIntroHandler}
           plate={plate}
-          cuisines={cuisines}
+          cuisines={cuisinesData}
           cuisineImg={cuisineImg}
         />
       </div>
@@ -89,7 +89,7 @@ const CuisinePage = () => {
       >
         <Unit
           backPageHandler={backPageHandler}
-          cuisines={cuisines}
+          cuisines={cuisinesData}
           plate={plate}
           cuisineImg={cuisineImg}
           intro={open}

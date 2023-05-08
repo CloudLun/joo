@@ -1,43 +1,67 @@
-import React, { useEffect, useRef } from "react";
+import React, {useEffect, useRef } from "react";
 import * as d3 from "d3";
 
+import { cuisinesData } from "../Data/cuisines";
+import { ingredientsData } from "../Data/ingredients";
+
 import tteokBokki from "../img/cuisines/Tteok-bokki.svg";
+import kimchi from "../img/cuisines/Kimchi.svg";
 import gimbap from "../img/cuisines/Gimbap.svg";
 import galbi from "../img/cuisines/Galbi.svg";
 import bibimbap from "../img/cuisines/Bibimbap.svg";
-import japchae from "../img/cuisines/Japchae.svg";
+import bulgogi from "../img/cuisines/Bulgogi.svg";
+import mandu from "../img/cuisines/Mandu.svg";
 import jeon from "../img/cuisines/Jeon.svg";
+import samgyeopsal from "../img/cuisines/Samgyeopsal.svg";
+import kimchiBokkeumBap from "../img/cuisines/Kimchi-bokkeum-bap.svg";
 import kimchiJjigae from "../img/cuisines/Kimchi-jjigae.svg";
+import janchiGuksu from "../img/cuisines/Janchi-guksu.svg";
+import kalGuksu from "../img/cuisines/Kal-guksu.svg";
+import japchae from "../img/cuisines/Japchae.svg";
+import budaeJjigae from "../img/cuisines/Budae jjigae.svg";
+
 import chiliPowder from "../img/chili powder 1.png";
 
 const cuisineImg = [
   tteokBokki,
+  kimchi,
   gimbap,
   galbi,
   bibimbap,
-  japchae,
+  bulgogi,
+  mandu,
   jeon,
+  samgyeopsal,
+  kimchiBokkeumBap,
   kimchiJjigae,
+  janchiGuksu,
+  kalGuksu,
+  japchae,
+  budaeJjigae,
 ];
 
-const cuisineList = [
-  "TteokBokki",
-  "Gimbap",
-  "Galbi",
-  "Bibimbap",
-  "Japchae",
-  "Jeon",
-  "Kimchi Jjigae",
-];
+const noPicsList = ["Gangjeong", "Soju", "Hotteok", "Tteok", "Sundae"];
 
-const ingredientList = [
-  "Gochujang",
-  "Gochugaru",
-  "Garlic",
-  "Soy sauce",
-  "Green onion",
-  "Seasame oil",
-  "Sesame seeds",
+let filteredCuisinesData = cuisinesData.filter(
+  (c) => !noPicsList.includes(c.name)
+);
+
+const parallelogramMatchList = [
+  [0, 1, 2, 9, 18],
+  [0, 1, 9, 14],
+  [3, 4, 5, 6, 7, 13, 17],
+  [0, 1, 2, 3, 6, 8, 12, 16],
+  [0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 13, 16, 17, 18],
+  [0, 1, 2, 3, 4, 5, 6, 13, 11, 16],
+  [0, 1, 2, 3, 4, 6, 9, 10, 11, 12, 15],
+  [0, 1, 3, 4, 5, 6, 7, 8, 14],
+  [],
+  [0, 1, 2, 3, 4, 6, 8, 10],
+  [0, 1, 6, 9, 10, 12, 15],
+  [1, 3, 7, 8, 19],
+  [0, 2, 3, 4, 6, 8, 14, 19],
+  [0, 1, 2, 3, 6, 7, 8, 16, 17],
+  [0, 1, 2, 3, 6, 9, 10, 18],
 ];
 
 const ParallelChart = () => {
@@ -45,7 +69,7 @@ const ParallelChart = () => {
   useEffect(() => {
     const svg = d3.select(ref.current);
     const height = ref.current.clientHeight;
-    const width = ref.current.clientWidth - 105;
+    const width = ref.current.clientWidth - 75;
 
     let cuisineCirclesPosition = [];
     let ingredientCirclesPosition = [];
@@ -57,131 +81,134 @@ const ParallelChart = () => {
       .enter()
       .append("image")
       .attr("xlink:href", (d) => d)
+      .attr("id", (d, i) => cuisinesData[i].name)
+      .attr("class", (d, i) => i)
       .attr("width", 75)
       .attr("height", 75)
+      .style('cursor', 'pointer')
       .attr("x", 0)
-      .attr("y", (d, i) => 120 * i);
-
-    let cuisineCircles = svg
-      .append("g")
-      .selectAll("cuisineCircles")
-      .data(cuisineImg)
-      .enter()
-      .append("circle")
-      .attr("class", "cuisineCircle")
-      .attr("r", 8)
-      .attr("cx", 125)
-      .attr("cy", (d, i) => 120 * i + 37.5)
-      .attr("fill", "#F9F7EE")
-      .attr("opacity", 0.5);
-
-    let cuisinesText = svg
-      .append("g")
-      .selectAll("cuisineTexts")
-      .data(cuisineList)
-      .enter()
-      .append("text")
-      .attr("class", "cuisineText")
-      .attr("x", 150)
-      .attr("y", (d, i) => 120 * i + 43.5)
-      .attr("fill", "#F9F7EE")
-      .attr("font-size", "16px")
-      .attr("opacity", 0.5)
-      .text((d) => d);
+      .attr("y", (d, i) => 122.143 * i)
+      .on("click", (e, d) => {
+        let target = +e.target.classList.value;
+        svg.selectAll(".path").remove();
+        parallelogramGenerator(target, parallelogramMatchList[target]);
+      });
 
     let ingredients = svg
       .append("g")
       .selectAll("ingredients")
-      .data(ingredientList)
+      .data(ingredientsData)
       .enter()
       .append("image")
       .attr("xlink:href", (d) => chiliPowder)
       .attr("width", 75)
       .attr("height", 75)
       .attr("x", width)
-      .attr("y", (d, i) => 120 * i);
+      .attr("y", (d, i) => 90 * i);
 
-    let ingredientCircles = svg
+    let cuisineRects = svg
       .append("g")
-      .selectAll("ingredientCircles")
-      .data(ingredientList)
+      .selectAll("cuisineRects")
+      .data(cuisineImg)
       .enter()
-      .append("circle")
-      .attr("class", "ingredientCircle")
-      .attr("r", 8)
-      .attr("cx", width - 50)
-      .attr("cy", (d, i) => 120 * i + 37.5)
+      .append("rect")
+      .attr("class", "cuisineRect")
+      .attr("width", "10px")
+      .attr("height", "45px")
+      .attr("x", 105)
+      .attr("y", (d, i) => 122.143 * i + 10)
       .attr("fill", "#F9F7EE")
       .attr("opacity", 0.5);
+
+    let ingredientRects = svg
+      .append("g")
+      .selectAll("ingredientRects")
+      .data(ingredientsData)
+      .enter()
+      .append("rect")
+      .attr("class", "ingredientRect")
+      .attr("width", "10px")
+      .attr("height", "45px")
+      .attr("x", width - 30)
+      .attr("y", (d, i) => 90 * i + 10)
+      .attr("stroke-width", "0px")
+      .attr("fill", "#F9F7EE")
+      .attr("opacity", 0.3);
+
+    let cuisinesText = svg
+      .append("g")
+      .selectAll("cuisineTexts")
+      .data(filteredCuisinesData)
+      .enter()
+      .append("text")
+      .attr("class", "cuisineText")
+      .attr("x", 127)
+      .attr("y", (d, i) => 122.143 * i + 37.5)
+      .attr("fill", "#F9F7EE")
+      .attr("font-size", "16px")
+      .attr("opacity", 0.5)
+      .style("letter-spacing", "1.5px")
+      .text((d) => d.name);
 
     let ingredientText = svg
       .append("g")
       .selectAll("cuisineTexts")
-      .data(ingredientList)
+      .data(ingredientsData)
       .enter()
       .append("text")
       .attr("class", "cuisineText")
-      .attr("x", width - 75)
-      .attr("y", (d, i) => 120 * i + 43.5)
+      .attr("x", width - 42)
+      .attr("y", (d, i) => 90 * i + 37.5)
       .attr("fill", "#F9F7EE")
       .attr("font-size", "16px")
       .attr("opacity", 0.5)
-      .attr('text-anchor', 'end')
-      .text((d) => d)
+      .style("letter-spacing", "1.5px")
+      .attr("text-anchor", "end")
+      .text((d) => d.name);
 
+    svg.selectAll(".path").remove();
 
-    for (let i = 0; i < 7; i++) {
-      cuisineCirclesPosition.push([
-        +document.querySelectorAll(`.cuisineCircle`)[i].attributes.cx.value,
-        +document.querySelectorAll(`.cuisineCircle`)[i].attributes.cy.value,
-      ]);
-      ingredientCirclesPosition.push([
-        +document.querySelectorAll(`.ingredientCircle`)[i].attributes.cx.value,
-        +document.querySelectorAll(`.ingredientCircle`)[i].attributes.cy.value,
-      ]);
-    }
-    console.log(cuisineCirclesPosition);
-    console.log(ingredientCirclesPosition);
+    const parallelogramGenerator = (order, list) => {
+      let parallelogramPoints;
 
-    const galbiData = [0, 1, 2, 3];
+      for (let i = 0; i < list.length; i++) {
+        parallelogramPoints = [
+          {
+            x: 115,
+            y: 122.143 * order + 10,
+          },
+          {
+            x: 115,
+            y: 122.143 * order + 55,
+          },
+          { x: width - 30, y: 90 * list[i] + 55 },
+          { x: width - 30, y: 90 * list[i] + 10 },
+        ];
+        let parallelogramArea = d3
+          .area()
+          .x((d) => d.x)
+          .y0((d) => d.y - 45)
+          .y1((d) => d.y);
 
-    let galbiLines = svg
-      .selectAll("galbiLines")
-      .data(galbiData)
-      .enter()
-      .append("path")
-      .attr("d", (d, i) => {
-        let dx = ingredientCirclesPosition[d][0] - cuisineCirclesPosition[3][0],
-          dy = ingredientCirclesPosition[d][1] - cuisineCirclesPosition[3][1],
-          dr = Math.sqrt(dx * dx + dy * dy);
-        return (
-          "M" +
-          cuisineCirclesPosition[3][0] +
-          "," +
-          cuisineCirclesPosition[3][1] +
-          "A" +
-          dr +
-          "," +
-          dr +
-          " 0 0,1 " +
-          ingredientCirclesPosition[d][0] +
-          "," +
-          ingredientCirclesPosition[d][1]
-        );
-      })
-      .attr("stroke", "#F9F7EE")
-      .attr("stroke-width", "3px")
-      .attr("fill", "none")
-      .style("opacity", 0.1);
+        svg
+          .append("path")
+          .attr("class", "path")
+          .attr("d", parallelogramArea(parallelogramPoints))
+          .attr("stroke", "none")
+          .attr("fill", "#F9F7EE")
+          .attr("opacity", 0.05);
+      }
+    };
+
+    const defaultParallelogram = () => {
+      parallelogramMatchList.map((p, i) => {
+        parallelogramGenerator(i, p);
+      });
+    };
+    defaultParallelogram();
   });
 
   return <svg ref={ref} className="w-full h-full"></svg>;
 };
 
 export default ParallelChart;
-
-// .append("line")
-// .attr("x1", cuisineCirclesPosition[2][0])
-// .attr("y1", cuisineCirclesPosition[2][1])
-// .attr("x2", (d) => ingredientCirclesPosition[d][0])
-// .attr("y2", (d) => ingredientCirclesPosition[d][1])
