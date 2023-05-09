@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Header from "../Shared/Header";
-import CourseInfo from "./CuisineInfo";
+import Holiday from "./Holiday";
+
+import { monthData } from "../Data/korean cuisines by seasons_v2";
 
 const header = {
   title: "Korean Holidays/Seasons Cuisines",
@@ -26,13 +28,32 @@ const months = [
 ];
 
 const MonthPage = () => {
-  const [select, setSelect] = useState(
-    months.map((m, i) => (m === "JAN" ? true : false))
-  );
-  
+  const [month, setMonth] = useState("JAN");
+  const [order, setOrder] = useState(0);
+
   const monthSelectHandler = (month) => {
-    setSelect(months.map((m, i) => (m === month ? true : false)))
-  }
+    setMonth(month);
+  };
+
+  let filteredMonthData =
+    month === "JAN" || month === "AUG"
+      ? monthData.filter((d) => d.month === month)[order]
+      : monthData.filter((d) => d.month === month)[0];
+
+  let maxOrder = monthData.filter((d) => d.month === month).length - 1;
+
+  const setOrderHandler = (direction) => {
+    if (direction === "right") {
+      if (order < maxOrder) {
+        setOrder(order + 1);
+      }
+    }
+    if (direction === "left") {
+      if (order > 0) {
+        setOrder(order - 1);
+      }
+    }
+  };
 
   return (
     <div className="px-[105px] pt-[80px] w-[100vw] text-white bg-main">
@@ -48,11 +69,11 @@ const MonthPage = () => {
               <div
                 key={i}
                 className={`border-2 pt-[28px] w-[89px] h-[89px] font-semibold text-[18px] text-center ${
-                  select[i] && "text-main"
+                  m === month && "text-main"
                 } hover:text-main tracking-[2px] leading-[28px] ${
-                  select[i] && "bg-white"
+                  m === month && "bg-white"
                 } hover:bg-white rounded-full cursor-pointer`}
-                onClick={ () => monthSelectHandler(m)}
+                onClick={() => monthSelectHandler(m)}
               >
                 {m}
               </div>
@@ -70,7 +91,15 @@ const MonthPage = () => {
           *follow th lunar calendar
         </div>
       </div>
-      <CourseInfo />
+      <Holiday
+        date={month}
+        holiday={filteredMonthData.holiday}
+        description={filteredMonthData.description}
+        food_name={filteredMonthData.food_name}
+        food_name_eng={filteredMonthData.food_name_eng}
+        ingredients={filteredMonthData.Ingredients}
+        setOrderHandler={setOrderHandler}
+      />
     </div>
   );
 };

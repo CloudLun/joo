@@ -1,6 +1,7 @@
 import React from "react";
 import CuisinePlate from "./CuisinePlate";
 
+// import logo from "../img/Group 7.svg";
 
 const CuisinePlates = ({ openIntroHandler, plate, cuisines, cuisineImg }) => {
   return (

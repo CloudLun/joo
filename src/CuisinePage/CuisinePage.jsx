@@ -88,12 +88,14 @@ const CuisinePage = () => {
         } absolute top-0 left-0 w-full z-20 bg-main`}
       >
         <Unit
+          type={'cuisine'}
           backPageHandler={backPageHandler}
-          cuisines={cuisinesData}
+          data={cuisinesData}
           plate={plate}
-          cuisineImg={cuisineImg}
+          image={cuisineImg}
           intro={open}
           order={order}
+          tags={'ingredients'}
         />
       </div>
       {/* <div className="border-2 flex justify-center items-center h-[281px]">

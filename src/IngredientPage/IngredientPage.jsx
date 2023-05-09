@@ -2,8 +2,31 @@ import React, { useState } from "react";
 import Header from "../Shared/Header";
 import IngredientPlates from "./IngredientPlates";
 import plate from "../img/plate.svg";
-import Unit from "./Unit";
-import chiliPowder from "../img/chili powder 1.png";
+import Unit from "../Shared/Unit";
+
+import { ingredientsData } from "../Data/ingredients";
+
+// ingredients images
+import garlic from "../img/Ingredients/Garlic.png";
+import scallion from "../img/Ingredients/scallion.png";
+import soySauce from "../img/Ingredients/soy sauce.png";
+import onion from "../img/Ingredients/onion.png";
+import sesameOil from "../img/Ingredients/sesame oil.png";
+import sesameSeed from "../img/Ingredients/sesame seed.png";
+import blackPepper from "../img/Ingredients/black pepper.png";
+import egg from "../img/Ingredients/egg.png";
+import vegetableOil from "../img/Ingredients/vegetable oil.png";
+import gochugaru from "../img/Ingredients/gochugaru.png";
+import kimchiIngredient from "../img/Ingredients/kimchi.png";
+import pepper from "../img/Ingredients/pepper.png";
+import ginger from "../img/Ingredients/ginger.png";
+import carrot from "../img/Ingredients/carrot.png";
+import flour from "../img/Ingredients/flour.png";
+import tofu from "../img/Ingredients/tofu.png";
+import beef from "../img/Ingredients/beef.png";
+import spinach from "../img/Ingredients/spinach.png";
+import gochujang from "../img/Ingredients/gochujang.png";
+import kelp from "../img/Ingredients/kelp.png";
 
 const header = {
   title: "All Ingredients of the Dishes",
@@ -13,10 +36,28 @@ const header = {
     "Top 20 Number of Traditional Korean Food Videos on YouTube in the first half of 2021, by dish",
 };
 
-let cuisineImg = [];
-for (let i = 0; i < 20; i++) {
-  cuisineImg.push(chiliPowder);
-}
+const ingredientsImg = [
+  garlic,
+  scallion,
+  soySauce,
+  onion,
+  sesameOil,
+  sesameSeed,
+  blackPepper,
+  egg,
+  vegetableOil,
+  gochugaru,
+  kimchiIngredient,
+  pepper,
+  ginger,
+  carrot,
+  flour,
+  tofu,
+  beef,
+  spinach,
+  gochujang,
+  kelp,
+];
 
 const ingredientsFor = [
   "Soft Tofu Stew",
@@ -221,41 +262,15 @@ const ingredients = [
   "noodle",
 ];
 
-const uniqueIngredients = ingredients.filter(
-  (value, index, array) => array.indexOf(value) === index
-);
-let ingredientCounts = [];
-let ingredientList = [];
-let ingredientTop = []
-
-for (let i = 0; i < uniqueIngredients.length; i++) {
-  // console.log(uniqueIngredients[i])
-  ingredientCounts = [];
-  for (let j = 0; j < ingredients.length; j++) {
-    if (uniqueIngredients[i] === ingredients[j])
-      ingredientCounts.push(ingredients[j]);
-  }
-  ingredientList.push({
-    ingredient: uniqueIngredients[i],
-    counts: ingredientCounts.length,
-  });
-}
-
-let commonList = ['vinegar','sugar','salt',"honey"]
-
-ingredientTop = ingredientList.sort(function (a, b) {
-  return a.counts - b.counts;
-}).slice(41,66).filter(ingredient => !commonList.includes(ingredient.ingredient))
-
-console.log(ingredientTop)
-
 const IngredientPage = () => {
   const [open, setOpen] = useState(false);
+  const [order, setOrder] = useState(0);
   const backPageHandler = () => {
     setOpen(false);
   };
   const openIntroHandler = (i) => {
-    setOpen(i);
+    setOrder(i);
+    setOpen(true);
   };
   return (
     <div className="relative flex flex-col px-[90px] pt-[80px] h-[100vh] text-white bg-main">
@@ -264,7 +279,8 @@ const IngredientPage = () => {
         <IngredientPlates
           openIntroHandler={openIntroHandler}
           plate={plate}
-          cuisineImg={cuisineImg}
+          ingredients={ingredientsData}
+          ingredientsImg={ingredientsImg}
         />
       </div>
       <div
@@ -274,12 +290,14 @@ const IngredientPage = () => {
       >
         {
           <Unit
+            type={"ingredient"}
             backPageHandler={backPageHandler}
-            openIntroHandler={openIntroHandler}
+            data={ingredientsData}
             plate={plate}
-            chiliPowder={chiliPowder}
+            image={ingredientsImg}
             intro={open}
-            ingredients={ingredientsFor}
+            order={order}
+            tags={"foods"}
           />
         }
       </div>
@@ -287,3 +305,31 @@ const IngredientPage = () => {
   );
 };
 export default IngredientPage;
+
+// const uniqueIngredients = ingredients.filter(
+//   (value, index, array) => array.indexOf(value) === index
+// );
+// let ingredientCounts = [];
+// let ingredientList = [];
+// let ingredientTop = []
+
+// for (let i = 0; i < uniqueIngredients.length; i++) {
+//   // console.log(uniqueIngredients[i])
+//   ingredientCounts = [];
+//   for (let j = 0; j < ingredients.length; j++) {
+//     if (uniqueIngredients[i] === ingredients[j])
+//       ingredientCounts.push(ingredients[j]);
+//   }
+//   ingredientList.push({
+//     ingredient: uniqueIngredients[i],
+//     counts: ingredientCounts.length,
+//   });
+// }
+
+// let commonList = ['vinegar','sugar','salt',"honey"]
+
+// ingredientTop = ingredientList.sort(function (a, b) {
+//   return a.counts - b.counts;
+// }).slice(41,66).filter(ingredient => !commonList.includes(ingredient.ingredient))
+
+// console.log(ingredientTop)

@@ -5,6 +5,7 @@ import IngredientPage from "./IngredientPage/IngredientPage";
 import ConnectPage from "./ConnectPage/ConnectPage";
 import RegionPage from "./RegionPage/RegionPage";
 import MonthPage from "./MonthPage/MonthPage";
+import EndingPage from "./EndingPage/EndingPage";
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <ConnectPage />
     <RegionPage />
     <MonthPage />
+    <EndingPage />
   </div>;
 }
 

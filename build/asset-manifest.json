@@ -1,14 +1,34 @@
 {
   "files": {
-    "main.css": "/joo/static/css/main.7c690695.css",
-    "main.js": "/joo/static/js/main.a9deff49.js",
+    "main.css": "/joo/static/css/main.4ad8577d.css",
+    "main.js": "/joo/static/js/main.55614128.js",
     "static/js/787.6bcd75b6.chunk.js": "/joo/static/js/787.6bcd75b6.chunk.js",
     "static/media/Korea.geojson": "/joo/static/media/Korea.dcea79d8a564a7b024ee.geojson",
     "static/media/Gimbap.svg": "/joo/static/media/Gimbap.2e74ac0276bc6f43bd8eae115dd3a8a5.svg",
+    "static/media/gochujang.png": "/joo/static/media/gochujang.98d97ffb1006e5e1771a.png",
     "static/media/Tteok-bokki.svg": "/joo/static/media/Tteok-bokki.f0b8f42f87a02e756eea3406cc5f6728.svg",
+    "static/media/gochugaru.png": "/joo/static/media/gochugaru.3727fddacdc9978fbc10.png",
+    "static/media/kimchi.png": "/joo/static/media/kimchi.2d9c5f50f7604b8fc36c.png",
+    "static/media/sesame seed.png": "/joo/static/media/sesame seed.6479eb60d3ab448253e7.png",
+    "static/media/beef.png": "/joo/static/media/beef.35c79fe81c4ae2c9ecd4.png",
+    "static/media/scallion.png": "/joo/static/media/scallion.4e76046a4ac9a13e3f3b.png",
     "static/media/Kimchi-bokkeum-bap.svg": "/joo/static/media/Kimchi-bokkeum-bap.d92ff4858824a21ec8c055179cf7df0f.svg",
+    "static/media/black pepper.png": "/joo/static/media/black pepper.8abed6d6ce9d4dd5f021.png",
     "static/media/chili powder 1.png": "/joo/static/media/chili powder 1.8ee00322be7157145726.png",
+    "static/media/kelp.png": "/joo/static/media/kelp.cd45eea7cf75552a01c5.png",
+    "static/media/spinach.png": "/joo/static/media/spinach.ee2ee931fb51ecd1b68f.png",
+    "static/media/tofu.png": "/joo/static/media/tofu.79a971d0a7a6befe52dc.png",
+    "static/media/flour.png": "/joo/static/media/flour.b4f656bbc06e6d2ceb8e.png",
+    "static/media/soy sauce.png": "/joo/static/media/soy sauce.c97ae2853254155b7114.png",
+    "static/media/onion.png": "/joo/static/media/onion.cd1c420b31cffc28bbbc.png",
+    "static/media/sesame oil.png": "/joo/static/media/sesame oil.8df6b85807e0a33cebb7.png",
+    "static/media/vegetable oil.png": "/joo/static/media/vegetable oil.8df6b85807e0a33cebb7.png",
+    "static/media/ginger.png": "/joo/static/media/ginger.89fb78cd826361496cae.png",
+    "static/media/Garlic.png": "/joo/static/media/Garlic.a3cd59f4a38741a1a91b.png",
+    "static/media/egg.png": "/joo/static/media/egg.407caf323e7f4df98f45.png",
+    "static/media/carrot.png": "/joo/static/media/carrot.1242df64c40ea71676b0.png",
     "static/media/Kal-guksu.svg": "/joo/static/media/Kal-guksu.9328f29fd134bcc0d5a712e6b0a4ff9e.svg",
+    "static/media/pepper.png": "/joo/static/media/pepper.1b949c78ba07ee9169a7.png",
     "static/media/Janchi-guksu.svg": "/joo/static/media/Janchi-guksu.af68b1a773b04bacbd241897540a94a7.svg",
     "static/media/Kimchi-jjigae.svg": "/joo/static/media/Kimchi-jjigae.1d477f5510390d4484d3f787b7d3affa.svg",
     "static/media/Bulgogi.svg": "/joo/static/media/Bulgogi.6e1df4a496f21dc1ed25feb6c634b47d.svg",
@@ -24,12 +44,12 @@
     "static/media/plate.svg": "/joo/static/media/plate.4b61f59ccdac6fd4a6e6472f8526ea73.svg",
     "index.html": "/joo/index.html",
     "static/media/Group 7.svg": "/joo/static/media/Group 7.6c8c821ab34404267e0e26b92f14042e.svg",
-    "main.7c690695.css.map": "/joo/static/css/main.7c690695.css.map",
-    "main.a9deff49.js.map": "/joo/static/js/main.a9deff49.js.map",
+    "main.4ad8577d.css.map": "/joo/static/css/main.4ad8577d.css.map",
+    "main.55614128.js.map": "/joo/static/js/main.55614128.js.map",
     "787.6bcd75b6.chunk.js.map": "/joo/static/js/787.6bcd75b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c690695.css",
-    "static/js/main.a9deff49.js"
+    "static/css/main.4ad8577d.css",
+    "static/js/main.55614128.js"
   ]
 }

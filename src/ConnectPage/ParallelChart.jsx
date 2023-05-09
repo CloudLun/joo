@@ -1,9 +1,10 @@
-import React, {useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 import { cuisinesData } from "../Data/cuisines";
 import { ingredientsData } from "../Data/ingredients";
 
+// cuisines images
 import tteokBokki from "../img/cuisines/Tteok-bokki.svg";
 import kimchi from "../img/cuisines/Kimchi.svg";
 import gimbap from "../img/cuisines/Gimbap.svg";
@@ -20,7 +21,27 @@ import kalGuksu from "../img/cuisines/Kal-guksu.svg";
 import japchae from "../img/cuisines/Japchae.svg";
 import budaeJjigae from "../img/cuisines/Budae jjigae.svg";
 
-import chiliPowder from "../img/chili powder 1.png";
+// ingredients images
+import garlic from "../img/Ingredients/Garlic.png";
+import scallion from "../img/Ingredients/scallion.png";
+import soySauce from "../img/Ingredients/soy sauce.png";
+import onion from "../img/Ingredients/onion.png";
+import sesameOil from "../img/Ingredients/sesame oil.png";
+import sesameSeed from "../img/Ingredients/sesame seed.png";
+import blackPepper from "../img/Ingredients/black pepper.png";
+import egg from "../img/Ingredients/egg.png";
+import vegetableOil from "../img/Ingredients/vegetable oil.png";
+import gochugaru from "../img/Ingredients/gochugaru.png";
+import kimchiIngredient from "../img/Ingredients/kimchi.png";
+import pepper from "../img/Ingredients/pepper.png";
+import ginger from "../img/Ingredients/ginger.png";
+import carrot from "../img/Ingredients/carrot.png";
+import flour from "../img/Ingredients/flour.png";
+import tofu from "../img/Ingredients/tofu.png";
+import beef from "../img/Ingredients/beef.png";
+import spinach from "../img/Ingredients/spinach.png";
+import gochujang from "../img/Ingredients/gochujang.png";
+import kelp from "../img/Ingredients/kelp.png";
 
 const cuisineImg = [
   tteokBokki,
@@ -38,6 +59,29 @@ const cuisineImg = [
   kalGuksu,
   japchae,
   budaeJjigae,
+];
+
+const ingredientImg = [
+  garlic,
+  scallion,
+  soySauce,
+  onion,
+  sesameOil,
+  sesameSeed,
+  blackPepper,
+  egg,
+  vegetableOil,
+  gochugaru,
+  kimchiIngredient,
+  pepper,
+  ginger,
+  carrot,
+  flour,
+  tofu,
+  beef,
+  spinach,
+  gochujang,
+  kelp,
 ];
 
 const noPicsList = ["Gangjeong", "Soju", "Hotteok", "Tteok", "Sundae"];
@@ -85,7 +129,7 @@ const ParallelChart = () => {
       .attr("class", (d, i) => i)
       .attr("width", 75)
       .attr("height", 75)
-      .style('cursor', 'pointer')
+      .style("cursor", "pointer")
       .attr("x", 0)
       .attr("y", (d, i) => 122.143 * i)
       .on("click", (e, d) => {
@@ -97,10 +141,10 @@ const ParallelChart = () => {
     let ingredients = svg
       .append("g")
       .selectAll("ingredients")
-      .data(ingredientsData)
+      .data(ingredientImg)
       .enter()
       .append("image")
-      .attr("xlink:href", (d) => chiliPowder)
+      .attr("xlink:href", (d) => d)
       .attr("width", 75)
       .attr("height", 75)
       .attr("x", width)
