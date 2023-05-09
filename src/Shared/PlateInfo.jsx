@@ -1,15 +1,15 @@
 import React from "react";
 
-import gochugaru from "../img/chili powder 1.png";
-import tteokBokki from "../img/cuisines/Tteok-bokki.svg";
+
+
 import plate from "../img/plate.svg";
 
-const PlateInfo = ({food_name, food_name_eng, ingredients }) => {
+const PlateInfo = ({food_img,food_name, food_name_eng, ingredients }) => {
   return (
     <div className="flex justify-center items-start gap-[113px] w-full">
       <div className="relative flex flex-col justify-center items-center w-[500px] h-[500px]">
         <img src={plate} alt="" className="w-full h-[full]" />
-        <img src={tteokBokki} alt="" className="absolute w-[60%] h-[55%]" />
+        <img src={food_img} alt="" className="absolute w-[60%] h-[55%]" />
       </div>
       <div className="">
         <div className="mt-[40px] mb-[60px]">

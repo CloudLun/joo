@@ -4,6 +4,12 @@ import Holiday from "./Holiday";
 
 import { monthData } from "../Data/korean cuisines by seasons_v2";
 
+import tteokBokki from "../img/cuisines/Tteok-bokki.svg";
+import tteokguk from "../img/Holiday cuisines/Tteokguk.svg";
+import jjeon from "../img/cuisines/Jeon.svg";
+import galbi from "../img/cuisines/Galbi.svg";
+import patjuk from "../img/Holiday cuisines/Patjuk.svg";
+
 const header = {
   title: "Korean Holidays/Seasons Cuisines",
   subtitle:
@@ -27,13 +33,21 @@ const months = [
   "DEC",
 ];
 
+const monthCuisine = {
+  JAN: [tteokguk, tteokBokki],
+  FEB:[],
+  MAY: [tteokBokki],
+  AUG: [jjeon, tteokBokki, galbi],
+  NOV: [patjuk],
+};
+
 const MonthPage = () => {
   const [month, setMonth] = useState("JAN");
   const [order, setOrder] = useState(0);
 
   const monthSelectHandler = (month) => {
     setMonth(month);
-    setOrder(0)
+    setOrder(0);
   };
 
   let filteredMonthData =
@@ -96,10 +110,12 @@ const MonthPage = () => {
         date={month}
         holiday={filteredMonthData.holiday}
         description={filteredMonthData.description}
+        food_img ={monthCuisine[month][order]}
         food_name={filteredMonthData.food_name}
         food_name_eng={filteredMonthData.food_name_eng}
         ingredients={filteredMonthData.Ingredients}
         setOrderHandler={setOrderHandler}
+        
       />
     </div>
   );

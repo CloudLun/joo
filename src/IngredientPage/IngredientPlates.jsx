@@ -14,12 +14,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="pt-[8px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="pt-[8px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[0].name}
           </h1> */}
           <img src={ingredientsImg[0]} alt="" className="w-[60%] h-[55%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[0].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -32,12 +32,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[8px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[8px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[1].name}
           </h1> */}
           <img src={ingredientsImg[1]} alt="" className="w-[60%] h-[55%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[1].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -50,12 +50,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[2].name}
           </h1> */}
           <img src={ingredientsImg[2]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[2].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -68,15 +68,14 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[3].name}
           </h1> */}
           <img src={ingredientsImg[3]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[3].counts / 120 *100).toFixed(0)}%
             </h3>
-
           </div>
         </div>
       </div>
@@ -86,12 +85,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[4].name}
           </h1> */}
           <img src={ingredientsImg[4]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[4].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -104,12 +103,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[5].name}
           </h1> */}
           <img src={ingredientsImg[5]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px] leading-[1]">
+            <h3 className="text-[18px] tracking-[1.5px] leading-[1]">
               {(ingredients[5].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -122,12 +121,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[6].name}
           </h1> */}
           <img src={ingredientsImg[6]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px] ">
+            <h3 className="text-[18px] tracking-[1.5px] ">
               {(ingredients[6].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -140,12 +139,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[7].name}
           </h1> */}
           <img src={ingredientsImg[7]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px] ">
+            <h3 className="text-[18px] tracking-[1.5px] ">
               {(ingredients[7].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -158,12 +157,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[8].name}
           </h1> */}
           <img src={ingredientsImg[8]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px] leading-[1]">
+            <h3 className="text-[18px] tracking-[1.5px] leading-[1]">
               {(ingredients[8].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -176,12 +175,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[9].name}
           </h1> */}
           <img src={ingredientsImg[9]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px] leading-[1]">
+            <h3 className="text-[18px] tracking-[1.5px] leading-[1]">
               {(ingredients[9].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -194,12 +193,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[10].name}
           </h1> */}
           <img src={ingredientsImg[10]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[10].counts / 120 *100).toFixed(0)}%
             </h3>
           </div>
@@ -211,12 +210,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[11].name}
           </h1> */}
           <img src={ingredientsImg[11]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px] leading-[1]">
+            <h3 className="text-[18px] tracking-[1.5px] leading-[1]">
               {(ingredients[11].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -229,12 +228,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[11px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[12].name}
           </h1> */}
           <img src={ingredientsImg[12]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px] leading-[1]">
+            <h3 className="text-[18px] tracking-[1.5px] leading-[1]">
               {(ingredients[12].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -247,12 +246,12 @@ const IngredientPlates = ({
       >
         <img src={plate} alt="" className="w-full h-full" />
         <div className="absolute flex flex-col justify-center items-center w-full h-full">
-          {/* <h1 className="mt-[10px] font-medium text-[12px] text-main tracking-[1.5px]">
+          {/* <h1 className="mt-[10px] font-medium text-[18px] text-main tracking-[1.5px]">
             {ingredients[13].name}
           </h1> */}
           <img src={ingredientsImg[13]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[12px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[13].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -270,7 +269,7 @@ const IngredientPlates = ({
           </h1> */}
           <img src={ingredientsImg[14]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[11px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[14].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -288,7 +287,7 @@ const IngredientPlates = ({
           </h1> */}
           <img src={ingredientsImg[15]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[11px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[15].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -306,7 +305,7 @@ const IngredientPlates = ({
           </h1> */}
           <img src={ingredientsImg[16]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[11px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[16].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -324,7 +323,7 @@ const IngredientPlates = ({
           </h1> */}
           <img src={ingredientsImg[17]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[11px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[17].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -342,7 +341,7 @@ const IngredientPlates = ({
           </h1> */}
           <img src={ingredientsImg[18]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[11px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[18].counts / 120 *100).toFixed(0)}%
             </h3>
 
@@ -360,7 +359,7 @@ const IngredientPlates = ({
           </h1> */}
           <img src={ingredientsImg[19]} alt="" className="w-[60%] h-[60%]" />
           <div className="font-regular  text-main text-center">
-            <h3 className="text-[11px] tracking-[1.5px]">
+            <h3 className="text-[18px] tracking-[1.5px]">
               {(ingredients[19].counts / 120 *100).toFixed(0)}%
             </h3>
 

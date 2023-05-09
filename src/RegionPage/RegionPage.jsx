@@ -4,13 +4,46 @@ import { region } from "../Data/korean cuisines by region.js";
 
 import Header from "../Shared/Header";
 import KoreanMap from "./KoreanMap";
-import Bibimbap from "../img/Group 23.png";
+
+import plate from "../img/plate.svg";
+import agwiJjim from "../img/Regional cuisines/Agwi-jjim.svg";
+import bibimbap from "../img/Regional cuisines/Bibimbap.svg";
+import galbi from "../img/Regional cuisines/Galbi.svg";
+import jeonbok from "../img/Regional cuisines/Jeonbok-juk.svg";
+import jjigae from "../img/Regional cuisines/Jjigae.svg";
+import kimchi from "../img/Regional cuisines/Kimchi.svg";
+import kongnamul from "../img/Regional cuisines/Kongnamul Guk.svg";
+import seolleongtang from "../img/Regional cuisines/Seolleongtang.svg";
+import squidBulgogi from "../img/Regional cuisines/Squid bulgogi.svg";
+import squidSundae from "../img/Regional cuisines/Squid Sundae.svg";
+import yukgaejang from "../img/Regional cuisines/Yukgaejang.svg";
 
 const header = {
   title: "Korea Regional Cuisines",
   subtitle:
     "Korean cuisines are influenced by climate, geography, and natural environment and characterized by local specialties..",
 };
+
+const NEGroup = ["Gangwon-do"];
+const NWGroup = ["Seoul", "Gyeonggi-do", "Incheon"];
+const MWGroup = ["Chungcheongnam-do", "Chungcheongbuk-do", "Sejong", "Daejeon"];
+const MEGroup = [
+  "Gyeongsangbuk-do",
+  "Gyeongsangnam-do",
+  "Busan",
+  "Ulsan",
+  "Daegu",
+];
+const SWGroup = ["Jeollabuk-do", "Jeollanam-do", "Gwangju"];
+const KoreanGroup = [NEGroup, NWGroup, MWGroup, MEGroup, SWGroup];
+
+const provinceImg = [
+  [squidSundae, squidBulgogi],
+  [seolleongtang, yukgaejang, galbi],
+  [jjigae],
+  [jeonbok, agwiJjim],
+  [bibimbap, kongnamul, kimchi],
+];
 
 const RegionPage = () => {
   const [province, setProvince] = useState(1);
@@ -22,7 +55,11 @@ const RegionPage = () => {
           MOUSE OVER THE MAP TO EXPLORE
         </h2>
         <div className="col-start-2 col-end-3 row-start-3 h-full">
-          <KoreanMap province={province} setProvince={setProvince} />
+          <KoreanMap
+            province={province}
+            setProvince={setProvince}
+            KoreanGroup={KoreanGroup}
+          />
         </div>
         <div className="col-start-4 col-end-5 row-start-3 w-full h-full">
           <div>
@@ -37,7 +74,29 @@ const RegionPage = () => {
             <h1 className="mb-[19px] font-bold text-[18px] tracking-[4px]">
               {`Foods in ${region[province].province}`}
             </h1>
-            <img src={Bibimbap} alt="" className="w-[118px] h-[118px]" />
+            <div className="flex items-center  gap-[25px]">
+              {provinceImg[province].map((p, i) => {
+                return (
+                  <div
+                    key={i}
+                    className="relative flex flex-col justify-center items-center w-[120px] h-[120px]"
+                  >
+                    <img src={plate} alt="" className="w-full h-[full]" />
+                    <div className="absolute flex flex-col justify-between items-center">
+                      <h1 className="mt-[5px] font-medium text-[10px] text-main tracking-[1.5px]">
+                        {region[province]['food'][i]}
+                      </h1>
+                      <img
+                        src={p}
+                        alt=""
+                        className="w-[60%] h-[60%]"
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
             {/* <div className="relative flex flex-col justify-center items-center w-[118px] h-[118px]">
               <img src={plate} alt="" className="w-full h-[full]" />
               <img

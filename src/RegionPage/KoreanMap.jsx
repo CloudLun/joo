@@ -1,23 +1,12 @@
 import React, { useEffect, useRef } from "react";
 
 import * as d3 from "d3";
-
 import Korea from "../Data/Korea.geojson";
 
-const NEGroup = ["Gangwon-do"];
-const NWGroup = ["Seoul", "Gyeonggi-do", "Incheon"];
-const MWGroup = ["Chungcheongnam-do", "Chungcheongbuk-do", "Sejong", "Daejeon"];
-const MEGroup = [
-  "Gyeongsangbuk-do",
-  "Gyeongsangnam-do",
-  "Busan",
-  "Ulsan",
-  "Daegu",
-];
-const SWGroup = ["Jeollabuk-do", "Jeollanam-do", "Gwangju"];
-const KoreanGroup = [NEGroup, NWGroup, MWGroup, MEGroup, SWGroup];
 
-const KoreanMap = ({ setProvince, province }) => {
+
+
+const KoreanMap = ({ setProvince, province, KoreanGroup }) => {
   const ref = useRef();
   let targetProvince;
   let targetProvinceGroup = [];

@@ -7,10 +7,11 @@ const Holiday = ({
   date,
   holiday,
   description,
+  food_img,
   food_name,
   food_name_eng,
   ingredients,
-  setOrderHandler
+  setOrderHandler,
 }) => {
   return (
     <div className="relative flex flex-col mt-[40px] pb-[60px] text-white">
@@ -26,6 +27,7 @@ const Holiday = ({
       {date !== "FEB" && (
         <div className="flex-1">
           <PlateInfo
+            food_img={food_img}
             food_name={food_name}
             food_name_eng={food_name_eng}
             ingredients={ingredients}
@@ -34,8 +36,14 @@ const Holiday = ({
       )}
       {date === "JAN" || date === "AUG" ? (
         <>
-          <div className="absolute top-[50%] left-0 border-t-2 border-l-2 border-white w-[30px] h-[30px] rotate-[-45deg] cursor-pointer" onClick={() => setOrderHandler("left")}></div>
-          <div className="absolute top-[50%] right-0 border-t-2 border-l-2 border-white w-[30px] h-[30px] rotate-[135deg] cursor-pointer" onClick={() => setOrderHandler("right")}></div>
+          <div
+            className="absolute top-[50%] left-0 border-t-2 border-l-2 border-white w-[30px] h-[30px] rotate-[-45deg] cursor-pointer"
+            onClick={() => setOrderHandler("left")}
+          ></div>
+          <div
+            className="absolute top-[50%] right-0 border-t-2 border-l-2 border-white w-[30px] h-[30px] rotate-[135deg] cursor-pointer"
+            onClick={() => setOrderHandler("right")}
+          ></div>
         </>
       ) : null}
     </div>
