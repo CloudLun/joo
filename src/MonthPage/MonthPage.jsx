@@ -33,6 +33,7 @@ const MonthPage = () => {
 
   const monthSelectHandler = (month) => {
     setMonth(month);
+    setOrder(0)
   };
 
   let filteredMonthData =

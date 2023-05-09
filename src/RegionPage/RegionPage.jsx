@@ -35,7 +35,7 @@ const RegionPage = () => {
           </div>
           <div>
             <h1 className="mb-[19px] font-bold text-[18px] tracking-[4px]">
-              {`Foods in ${region[province].title}`}
+              {`Foods in ${region[province].province}`}
             </h1>
             <img src={Bibimbap} alt="" className="w-[118px] h-[118px]" />
             {/* <div className="relative flex flex-col justify-center items-center w-[118px] h-[118px]">

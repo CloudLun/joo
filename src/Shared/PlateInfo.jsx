@@ -29,7 +29,7 @@ const PlateInfo = ({food_name, food_name_eng, ingredients }) => {
               return (
                 <h3
                   key={i}
-                  className="inline mb-[5px] px-[20px] py-[5px] text-white text-center rounded-[36px] bg-[#fff]/[0.15] cursor-pointer"
+                  className="inline mb-[5px] px-[20px] py-[5px] text-main text-center rounded-[36px] bg-white cursor-pointer"
                 >
                   {ingredient}
                 </h3>

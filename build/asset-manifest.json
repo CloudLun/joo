@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/joo/static/css/main.4ad8577d.css",
-    "main.js": "/joo/static/js/main.55614128.js",
+    "main.js": "/joo/static/js/main.973641a7.js",
     "static/js/787.6bcd75b6.chunk.js": "/joo/static/js/787.6bcd75b6.chunk.js",
     "static/media/Korea.geojson": "/joo/static/media/Korea.dcea79d8a564a7b024ee.geojson",
     "static/media/Gimbap.svg": "/joo/static/media/Gimbap.2e74ac0276bc6f43bd8eae115dd3a8a5.svg",
@@ -45,11 +45,11 @@
     "index.html": "/joo/index.html",
     "static/media/Group 7.svg": "/joo/static/media/Group 7.6c8c821ab34404267e0e26b92f14042e.svg",
     "main.4ad8577d.css.map": "/joo/static/css/main.4ad8577d.css.map",
-    "main.55614128.js.map": "/joo/static/js/main.55614128.js.map",
+    "main.973641a7.js.map": "/joo/static/js/main.973641a7.js.map",
     "787.6bcd75b6.chunk.js.map": "/joo/static/js/787.6bcd75b6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4ad8577d.css",
-    "static/js/main.55614128.js"
+    "static/js/main.973641a7.js"
   ]
 }
